@@ -1,4 +1,6 @@
 import { ContactForm } from "./ContactForm";
+import { DecisionRoom } from "./DecisionRoom";
+import { ExperienceLayer } from "./ExperienceLayer";
 
 const services = [
   {
@@ -66,13 +68,14 @@ const insights = [
 export default function Home() {
   return (
     <main>
+      <ExperienceLayer />
       <header className="siteHeader">
         <a className="brand" href="#inicio" aria-label="Estratega Consultores, inicio">
           <span className="brandMark" aria-hidden="true"><i /></span>
           <span className="brandWords"><strong>ESTRATEGA</strong><small>CONSULTORES</small></span>
         </a>
         <nav className="desktopNav" aria-label="Navegación principal">
-          <a href="#firma">La firma</a>
+          <a href="#diagnostico">Diagnóstico</a>
           <a href="#servicios">Servicios</a>
           <a href="#experiencia">Experiencia</a>
           <a href="#casos">Casos</a>
@@ -82,7 +85,7 @@ export default function Home() {
         <details className="mobileMenu">
           <summary aria-label="Abrir menú"><span /><span /></summary>
           <nav aria-label="Navegación móvil">
-            <a href="#firma">La firma</a><a href="#servicios">Servicios</a>
+            <a href="#diagnostico">Diagnóstico</a><a href="#servicios">Servicios</a>
             <a href="#experiencia">Experiencia</a><a href="#casos">Casos</a><a href="#equipo">Equipo</a>
             <a href="#contacto">Solicitar consulta</a>
           </nav>
@@ -134,8 +137,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="decisionRoomSection" id="diagnostico">
+        <div className="decisionIntro">
+          <div className="sectionLabel darkLabel"><span>02</span> Diagnóstico ejecutivo</div>
+          <div><p className="eyebrow light">Explore una ruta inicial</p><h2>No todas las crisis empiezan igual.<br /><em>La respuesta tampoco.</em></h2></div>
+          <p>Seleccione el escenario que más se acerca a su situación y vea cómo ordenamos las primeras decisiones. Es una demostración, no un diagnóstico automático.</p>
+        </div>
+        <DecisionRoom />
+      </section>
+
       <section className="section intro" id="firma">
-        <div className="sectionLabel"><span>02</span> La firma</div>
+        <div className="sectionLabel"><span>03</span> La firma</div>
         <div className="introCopy">
           <p className="eyebrow">Una mirada completa al negocio</p>
           <h2>Protegemos valor.<br />Recuperamos viabilidad.</h2>
@@ -150,7 +162,7 @@ export default function Home() {
       </section>
 
       <section className="section servicesSection" id="servicios">
-        <div className="sectionLabel"><span>03</span> Servicios</div>
+        <div className="sectionLabel"><span>04</span> Servicios</div>
         <div className="sectionHeading">
           <div><p className="eyebrow">Capacidad multidisciplinaria</p><h2>Soluciones para cada etapa de una decisión crítica.</h2></div>
           <p>Desde el diagnóstico inicial hasta la ejecución y el seguimiento de acuerdos.</p>
@@ -166,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="section mandateSection" id="casos">
-        <div className="sectionLabel"><span>04</span> Experiencia representativa</div>
+        <div className="sectionLabel"><span>05</span> Experiencia representativa</div>
         <div className="sectionHeading">
           <div><p className="eyebrow">Resultados sin comprometer confidencialidad</p><h2>La experiencia se demuestra en la ejecución.</h2></div>
           <p>Mandatos anonimizados basados en la experiencia comunicada por la firma.</p>
@@ -196,7 +208,7 @@ export default function Home() {
       </section>
 
       <section className="section process" id="metodo">
-        <div className="sectionLabel"><span>05</span> Nuestro método</div>
+        <div className="sectionLabel"><span>06</span> Nuestro método</div>
         <div className="sectionHeading compact">
           <div><p className="eyebrow">De la complejidad a la ejecución</p><h2>Un proceso claro, de principio a fin.</h2></div>
         </div>
@@ -208,7 +220,7 @@ export default function Home() {
       </section>
 
       <section className="section teamSection" id="equipo">
-        <div className="sectionLabel"><span>06</span> Equipo</div>
+        <div className="sectionLabel"><span>07</span> Equipo</div>
         <div className="sectionHeading">
           <div><p className="eyebrow">Experiencia interdisciplinaria</p><h2>Especialistas que hablan el mismo lenguaje.</h2></div>
           <p>Consultores financieros y abogados con trayectoria en procesos corporativos complejos.</p>
@@ -225,7 +237,7 @@ export default function Home() {
       </section>
 
       <section className="section insightsSection" id="insights">
-        <div className="sectionLabel"><span>07</span> Perspectivas</div>
+        <div className="sectionLabel"><span>08</span> Perspectivas</div>
         <div className="sectionHeading">
           <div><p className="eyebrow">Criterio para quienes deciden</p><h2>Conocimiento que ayuda a actuar antes.</h2></div>
           <p>Una línea editorial propuesta para posicionar a Estratega como referente en situaciones especiales.</p>
@@ -255,6 +267,8 @@ export default function Home() {
         </div>
         <ContactForm />
       </section>
+
+      <a className="floatingConsult" href="#contacto"><i /><span><small>Consulta confidencial</small>Hablar con un consultor</span><b>↗</b></a>
 
       <footer>
         <a className="brand footerBrand" href="#inicio" aria-label="Volver al inicio">

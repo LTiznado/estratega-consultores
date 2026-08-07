@@ -20,9 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "Decisiones complejas. Estrategias claras.",
       type: "website",
       locale: "es_PE",
-      images: [{ url: "/og-v2.png", width: 1200, height: 630, alt: "Estratega Consultores — Decisiones complejas. Estrategias claras." }],
+      images: [{ url: "/og-v3.png", width: 1200, height: 630, alt: "Estratega Consultores — Decisiones complejas. Estrategias claras." }],
     },
-    twitter: { card: "summary_large_image", title: "Estratega Consultores", description: "Decisiones complejas. Estrategias claras.", images: ["/og-v2.png"] },
+    twitter: { card: "summary_large_image", title: "Estratega Consultores", description: "Decisiones complejas. Estrategias claras.", images: ["/og-v3.png"] },
   };
 }
 
